@@ -9,15 +9,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arkamovil.android.R;
 import com.arkamovil.android.menu_desplegable.CasosUso;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 
 public class CasoUso1 extends Fragment {
@@ -34,11 +39,10 @@ public class CasoUso1 extends Fragment {
     private int caso = 0;
     private int contador = 0;
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.fm_casouso1, container, false);
 
         Button fecha = (Button) rootView.findViewById(R.id.fecha);
@@ -83,6 +87,16 @@ public class CasoUso1 extends Fragment {
                 }
             }
         });
+
+
+        Spinner spin = (Spinner) rootView.findViewById(R.id.sede);
+        List<String> toSpin = new ArrayList<String>();
+        toSpin.add("sede 45");
+        toSpin.add("Sede Vivero");
+        toSpin.add("Sede Macarena");
+        toSpin.add("Sede Tecnologica");
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,toSpin);
+        spin.setAdapter(adapter);
 
         return rootView;
     }

@@ -9,9 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Librerias" />
-            <option value="$PROJECT_DIR$/Librerias/CaptureActivity" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/librerias" />
+            <option value="$PROJECT_DIR$/librerias/CaptureActivity" />
           </set>
         </option>
       </GradleProjectSettings>

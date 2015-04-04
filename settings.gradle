@@ -1,2 +1,2 @@
 include ':app'
-include ':Librerias:CaptureActivity'
+include ':librerias:CaptureActivity'

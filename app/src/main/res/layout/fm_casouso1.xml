@@ -49,8 +49,9 @@
             <Spinner
                 android:layout_below="@+id/label_sede"
                 android:id="@+id/sede"
-                style="@style/spinnerArkaMovil"
-                />
+                style="@style/Standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:layout_below="@+id/sede"
