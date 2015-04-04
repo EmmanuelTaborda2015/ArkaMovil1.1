@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#3CF"
+    android:alpha="0.6"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src= "@drawable/google"
+        android:id="@+id/google"
+        android:layout_weight="0.06"
+        android:layout_gravity="center"
+         />
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src= "@drawable/facebook"
+        android:id="@+id/facebook"
+        android:layout_weight="0.06"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src= "@drawable/twitter2"
+        android:id="@+id/twitter"
+        android:layout_weight="0.06"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src= "@drawable/ud"
+        android:layout_weight="0.06"
+        android:layout_gravity="center" />
+</LinearLayout>
