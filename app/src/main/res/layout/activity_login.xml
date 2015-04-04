@@ -29,9 +29,7 @@
             android:paddingTop="160dp"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-
-           >
+            android:paddingRight="20dp">
 
             <TextView
                 android:id="@+id/etiqueta_usuario"
@@ -70,7 +68,7 @@
     </FrameLayout>
 
     <FrameLayout android:id="@+id/informacion" android:layout_width="match_parent"
-        android:layout_height="40dp" >
+        android:layout_height="50dp" >
 
         <fragment
             android:name="com.arkamovil.android.Informacion.PiePaginaRedes"

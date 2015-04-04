@@ -15,18 +15,7 @@ public class Login extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        //Se crea el evento para ir a la pagina web de google+
-        ImageView img = (ImageView)findViewById(R.id.google);
-        img.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.google.com"));
-                startActivity(intent);
-            }
-        });
-        //////////////////////////////////////////////////////
+
     }
 
     public void login(View view){
