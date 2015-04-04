@@ -1,28 +1,21 @@
 package com.arkamovil.android.casos_uso;
 
 import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arkamovil.android.R;
-import com.arkamovil.android.menu_desplegable.CasosUso;
+import com.arkamovil.android.procesos.LlenarSpinner;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 
 public class CasoUso1 extends Fragment {
@@ -88,18 +81,19 @@ public class CasoUso1 extends Fragment {
             }
         });
 
+        //Se crea un objeto de la clse Llenar Spinner y se llama la función llenar, que es la encargada de cargar los datos al Spinner.
+        //Se envian como parametros la actividad y el Spinner a llenar. posiblemente tambien se envie una consulta.
 
-        Spinner spin = (Spinner) rootView.findViewById(R.id.sede);
-        List<String> toSpin = new ArrayList<String>();
-        toSpin.add("sede 45");
-        toSpin.add("Sede Vivero");
-        toSpin.add("Sede Macarena");
-        toSpin.add("Sede Tecnologica");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,toSpin);
-        spin.setAdapter(adapter);
+        LlenarSpinner llenar = new LlenarSpinner();
+        llenar.llenar(getActivity(),(Spinner) rootView.findViewById(R.id.sede));
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////
 
         return rootView;
     }
+
+
+    //Función que permite asignar la fecha seleccionada en el calendario al campo
 
     private DatePickerDialog.OnDateSetListener datePickerListener
             = new DatePickerDialog.OnDateSetListener() {
@@ -136,6 +130,8 @@ public class CasoUso1 extends Fragment {
             }
         }
     };
+
+    //Se verifica si la fecha de visita es previa a la fecha de la proxima visita
 
     public boolean verificarFechas(){
 
